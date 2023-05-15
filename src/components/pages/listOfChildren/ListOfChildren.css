@@ -1,0 +1,410 @@
+
+    .listofChildren-wrapper-recomentation .carousel {
+        position: relative;
+        margin: 0 auto;
+        }
+    
+        .listofChildren-wrapper-recomentation .listofChildren-content .container {
+        padding: 0;
+        margin: 0 auto;
+        }
+        .listofChildren-wrapper-recomentation .carousel-content {
+        position: relative;
+        overflow: hidden;
+        transition: width .4s;
+        height: 100%;
+        }
+        .listofChildren-wrapper-recomentation .slide {
+        height: 100%;
+        background-color: black;
+        z-index: 1;
+        transition: left .4s cubic-bezier(.47,.13,.15,.89);
+        border: 0;
+        background-color: transparent;
+        margin: 12px 12px;
+        }
+        .listofChildren-wrapper-recomentation .nav-left {
+        left: -15px;
+        }
+        .listofChildren-wrapper-recomentation .nav-right {
+        right: 3px;
+        }
+        .listofChildren-wrapper-recomentation .carousel-arrow-icon-left {
+        margin-left: 5px;
+        margin-top: 0;
+        height: 60px;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        }
+        .listofChildren-wrapper-recomentation .carousel-arrow-icon-right {
+        margin-left: 10px;
+        margin-top: 2px;
+        height: 60px;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        }
+    
+        .listofChildren-wrapper-recomentation .nav {
+        position: absolute;
+        top: 45%;
+        margin-top: -10px;
+        width: 20px;
+        height: 20px;
+        z-index: 2;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        }
+    
+        .listofChildren-wrapper-recomentation   {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 0px 12px -3px #111;
+}
+        .listofChildren-wrapper-recomentation .homehd-wrapper img {
+        width: 90px;
+        height: 60px !important;
+        }
+        .listofChildren-wrapper-recomentation .listofChildren-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        .listofChildren-header {
+        padding: 20px 0;
+        }
+        .listofChildren-header h6 {
+        font-size: 25px;
+        color: #111;
+        }
+        .listofChildren-header span {
+        font-size: 16px;
+        color: #111;
+        font-weight: bold;
+        }
+        .listofChildren-content .container {
+        padding: 0;
+        margin: 0 auto;
+        }
+    
+    
+    
+    
+    
+        .listofChildren-wrapper-recomentation .slideItemimg {
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    
+        .listofChildren-wrapper-recomentation  .slideItemDetails {
+        height: 60px;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        }
+        .listofChildren-wrapper-recomentation .carousel-content {
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .listofChildren-wrapper-recomentation  .favicon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        }
+        .listofChildren-wrapper-recomentation  .slide-main-wrapper {
+        border: 1px solid #a89494;
+        width: 260px;
+        height: 337px;
+        margin: 0 auto;
+        position: relative;
+        background-color: #fff;
+        cursor: pointer;
+        }
+        .listofChildren-wrapper-recomentation .slideItemCreatedWhen {
+        padding-top: 10px;
+        font-size: 11px;
+        text-align: right;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        }
+        .listofChildren-wrapper-recomentation .slide-main-wrapper:hover .slideItemCreatedWhen {
+        background-color: #000000;
+        color: #fff;
+        margin-top: 10px;
+        }
+        .listofChildren-wrapper-recomentation .slideItemDetails label {
+        font-size: 20px;
+        font-weight: bold;
+        color: #111;
+        margin: 0;
+        }
+        .listofChildren-wrapper-recomentation .slideItemDetails span {
+        text-transform: capitalize;
+        }
+        .listofChildren-wrapper-recomentation .slideItemimg img {
+        min-height: 150px;
+        max-width: 150px;
+        }
+        .listofChildren-wrapper-recomentation .loadmorebutton {
+        margin: 50px;    
+        display: flex;
+        justify-content: center;
+        padding-bottom: 100px;
+        }
+        .listofChildren-wrapper-recomentation .loadmorebutton button {
+        background-color: black;
+        color: #fff;
+        height: 45px;
+        width: 120px;
+        border-radius: 30px;
+        }
+    
+    
+    
+        /*-- carousel for recomentation --*/
+    
+        .listofChildren-wrapper-recomentation  .carousel {
+        position: relative;
+        margin: 0 auto;
+        }
+    
+        .listofChildren-wrapper-recomentation .listofChildren-content .container {
+        padding: 0;
+        margin: 0 auto;
+        }
+        .listofChildren-wrapper-recomentation  .carousel-content {
+        position: relative;
+        overflow: hidden;
+        transition: width .4s;
+        height: 100%;
+        }
+        .listofChildren-wrapper-recomentation .slide {
+        height: 100%;
+        background-color: black;
+        z-index: 1;
+        transition: left .4s cubic-bezier(.47,.13,.15,.89);
+        border: 0;
+        background-color: transparent;
+        margin: 12px 0px;
+        }
+        .listofChildren-wrapper-recomentation  .nav-left {
+        left: -15px;
+        }
+        .listofChildren-wrapper-recomentation  .nav-right {
+        right: 3px;
+        }
+        .listofChildren-wrapper-recomentation .carousel-arrow-icon-left {
+        margin-left: 5px;
+        margin-top: 0;
+        height: 60px;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        }
+        .listofChildren-wrapper-recomentation .carousel-arrow-icon-right {
+        margin-left: 10px;
+        margin-top: 2px;
+        height: 60px;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+        }
+    
+        .listofChildren-wrapper-recomentation .nav {
+        position: absolute;
+        top: 45%;
+        margin-top: -10px;
+        width: 20px;
+        height: 20px;
+        z-index: 2;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        }
+    
+        .listofChildren-wrapper-recomentation .listofChildren-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 0 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        }
+        .listofChildren-wrapper-recomentation .homehd-wrapper img {
+        width: 90px;
+        height: 60px !important;
+        }
+        .listofChildren-wrapper-recomentation .listofChildren-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        .listofChildren-wrapper-recomentation .listofChildren-header {
+            padding: 0px 0 20px 0;
+        }
+        .listofChildren-wrapper-recomentation .listofChildren-header h6 {
+        font-size: 25px;
+        color: #111;
+        }
+        .listofChildren-wrapper-recomentation .listofChildren-header span {
+        font-size: 16px;
+        color: #111;
+        font-weight: bold;
+        }
+        .listofChildren-wrapper-recomentation .listofChildren-content .container {
+        padding: 0;
+        margin: 0 auto;
+        }
+    
+    
+    
+    
+    
+        .listofChildren-wrapper-recomentation .slideItemimg {
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    
+        .listofChildren-wrapper-recomentation .slideItemDetails {
+        height: 60px;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        }
+        .listofChildren-wrapper-recomentation .carousel-content {
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .favicon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        }
+        
+    
+            
+        .listofChildren-wrapper-recomentation .slide-main-wrapper {
+        border: 1px solid #a89494;
+        width: 260px;
+        height: 337px;
+        margin: 0 auto;
+        position: relative;
+        background-color: #fff;
+        cursor: pointer;
+        }
+        .listofChildren-wrapper-recomentation .slideItemCreatedWhen {
+        padding-top: 10px;
+        font-size: 11px;
+        text-align: right;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        }
+        .listofChildren-wrapper-recomentation .slideItemDetails label {
+        font-size: 20px;
+        font-weight: bold;
+        color: #111;
+        margin: 0;
+        }
+        .listofChildren-wrapper-recomentation  .slideItemDetails span {
+        text-transform: capitalize;
+        }
+        .listofChildren-wrapper-recomentation .slideItemimg img {
+        min-height: 150px;
+        max-width: 150px;
+        }
+        .listofChildren-wrapper-recomentation .loadmorebutton {
+        margin: 50px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 100px;
+        }
+        .listofChildren-wrapper-recomentation .loadmorebutton button {
+        background-color: black;
+        color: #fff;
+        height: 45px;
+        width: 120px;
+        border-radius: 30px;
+        }
+        .slide-main-wrapper:hover {
+            border: 1px solid #000000;
+        }
+        .slide-main-wrapper:hover .favicon{
+            animation: favani 0.9s infinite;
+        }
+        @keyframes favani {
+            0% {
+                transform: scale(1);
+        transition: .5s;
+            }
+            50% {
+                transform: scale(0.5);
+                transition: .5s;
+            }
+            100% {
+                transform: scale(1);
+                transition: .5s;
+            }
+        }
+    
+    /*-- End carousel for recomentation --*/
+
+    .listofChildren-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    height: 170px;
+    margin: 15px 0;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0 0 7px -1px #c1b7b7;
+    width: 49%;
+}
+    .listofChildren-card-lft {
+    width: 240px;
+}
+    .listofChildren-card-lft img {
+        height: 100%;
+    }
+    .listofChildren-card-rgt {
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+    .listofChildren-card-date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .listofChildren-card-prdname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+.listofChildren-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+h6 {
+    margin: 0;
+  }

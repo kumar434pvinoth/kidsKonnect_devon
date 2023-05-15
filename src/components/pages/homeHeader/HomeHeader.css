@@ -1,0 +1,187 @@
+.homehd-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #ffff;
+    height: 85px;
+    box-shadow: 1px 0px 12px -3px #111;
+    position: fixed;
+    width: 100%;
+    top:0px;
+    z-index: 999;
+}
+.pg-container {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+}
+.homehd-wrapper img {
+    width: 90px;
+    height: 60px !important;
+}
+.searchBox {
+    display: flex;
+    align-content: center;
+    height: 55px;
+    margin-left: 15px;
+}
+.searchbutton {
+    width: 55px;
+    height: 55px;
+    background-color: #111;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.searchbutton svg {
+    fill: #ffff;
+    margin-left: 12px;
+    font-size: 32px;
+    margin-top: 3px;
+}
+.login {
+    height: 55px;
+    margin: 0  15px;
+    display: flex;
+    align-items: center;
+}
+.selectboxlocation {
+    height: 55px;
+    margin-left: 10px;
+}
+.lng {
+    height: 55px;
+    margin-left: 15px;
+    text-transform: capitalize;
+}
+
+/*-- customized MUI Lib --*/
+.lng  .MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border: 0;
+}
+.login button {
+    color: #111;
+    font-weight: bold;
+    text-transform: capitalize;
+    outline: none;
+}
+
+.lng div {
+    text-transform: capitalize;
+}
+.searchBox, .selectboxlocation .MuiFormControl-root {
+    background-color: #fff;
+    
+}
+
+
+
+
+
+.kk-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+}
+ .navbar-brand {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+.navbar-brand span {
+    display: inline-block;
+    color: var(--primary-color);
+  }
+  
+ .navbar-brand:hover {
+    opacity: 0.95;
+  }
+  
+ .navbar-brand img {
+    max-width: 140px;
+    transition: all 0.5s ease;
+  }
+
+  /*-- Post a news --*/
+
+  .news-model {
+    width: 100%;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    min-width: 50%;
+}
+.news-model h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.news-model h5 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.news-model [type="text"] {
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.news-model textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    height: 250px;
+    padding: 20px;
+    font-size: 16px;
+}
+input[type="submit"] {
+    width: 100%;
+    outline: none;
+    background-color: #F42A2A;
+    height: 50px;
+    padding-left: 20px;
+    color: #fff;
+    border: 0;
+    margin-top: 20px;
+}
+.navbar a label {
+    background-color: #F42A2A;
+    color: #fff;
+    padding: 5px 8px;
+}
+.navbar {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #F42A2A;
+}
+.navbar-brand {
+    color: #F42A2A;
+}
+.kk-header nav img {
+    width: auto;
+}
+.babycarelogo {
+    animation: bounceLogo 3s infinite;
+}
+@keyframes bounceLogo {
+    0% {
+        transform: scale(1);
+        transition: .5s;
+    }
+    50% {
+        transform: scale(0.5);
+        transition: .5s;
+    }
+    100% {
+        transform: scale(1);
+        transition: .5s;
+    }
+}

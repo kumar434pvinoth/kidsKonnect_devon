@@ -1,0 +1,37 @@
+.meganav ul li {
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.meganav ul li a {
+    color: #F42A2A;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mega-nav {
+    width: 100%;
+}
+.meganav {
+    background-color: #fff;
+    margin-top: 87px;
+    z-index: 999;
+}
+.meganav ul li:hover {
+    background-color: #F42A2A;
+    color: #fff;
+}
+.mega-nav ul {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+.meganav ul li {
+    list-style: none;
+}
+ a {
+   text-decoration: none;
+}
+.meganav ul li:hover a {
+    color: #fff;
+}

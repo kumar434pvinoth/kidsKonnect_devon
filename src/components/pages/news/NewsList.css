@@ -1,0 +1,20 @@
+.kindskonnect-main-content-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+.kindskonnect-main-content-wrapper-ads  {
+    width: 100%;
+    height: 280px;
+}
+.kindskonnect-main-content-wrapper-ads  img {
+    width: 100%;
+    height: 100%;
+}
+.kindskonnect-main-content-wrapper-ads {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.kindskonnect-main-banner img {
+    width: 100%;
+}
