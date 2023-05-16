@@ -7,7 +7,6 @@ import { IKidsKonnectChildren, } from '../../../globals/types';
 export default function ListOfChildren() {
   
   const [kidsKonnectChildren, setKidsKonnectChildren] = useState([]);
-  const [kidsKonnectDataGroup, setKidsKonnectDataGroup] = useState([]);
   const [progressBar, setProgressBar] = useState(false);
 
   const getChildrenUrl = 'http://localhost:3001/children/';
@@ -21,6 +20,7 @@ export default function ListOfChildren() {
 
     return  (
         <>
+
             {progressBar && <ProgressBar message={'Loading...'}/> }
             <div className="listofChildren-wrapper-recomentation">
                 <div className='listofChildren-header'>

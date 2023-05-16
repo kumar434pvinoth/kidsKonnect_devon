@@ -21,7 +21,6 @@ export default function LandingPage() {
                               <Link to="sessions" ><a className="btn btn-style btn-white mt-sm-5 mt-4 mr-2" > Sessions Overview
                               </a></Link>
                             </div>
-
                           </div>
                         </div>
                       </div>

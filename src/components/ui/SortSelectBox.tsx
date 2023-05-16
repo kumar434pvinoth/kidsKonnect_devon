@@ -1,9 +1,8 @@
 import  React, {useState, useEffect, } from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 
 
 // export interface IGroupListProps {
@@ -11,18 +10,22 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 //   handleChangeGroupeCallBack: (string) => void;
 // }
 export default function SortSelectBox(props) {
-  
-  const [selectboxValue, setSelectboxValue] = React.useState('');
 
-  const [item, setItem] = useState([]);
-  const groupeListTemp = ['Group 1','Group 2','Group 3','Group 4','Group 5']
+  const [selectboxValue, setSelectboxValue] = useState([]);
+
+  // const groupeListTemp = ['Group 1','Group 2','Group 3','Group 4','Group 5'];
+
   const handleChangeGroupe = (e) => {
     setSelectboxValue(e.target.value);
     props.handleChangeGroupeCallBack(e.target.value);
     // props.setProgressBar(true);
   };
+  
+  // let selectBoxValues: any = Object.entries(props.kidsKonnectSessionsDate);
+  // console.log('asdsadasdasdsad2323123' , selectBoxValues);
+
+  
   useEffect(() => {
-    console.log('---------' + JSON.stringify(props.groupeList));
     // let duplicatesGroupeJSON = JSON.stringify(props.groupeList).reduce((acc, curr) => {
     //       return acc.includes(item) ? acc : [...acc , curr];
     // }, []);
@@ -33,7 +36,7 @@ export default function SortSelectBox(props) {
     // setItem(removeDuplicatesGroupe);
     // console.log("removeDuplicatesGroupe--" + JSON.stringify(removeDuplicatesGroupe));
 
-  }, []);
+  });
  
 
   return (
@@ -51,7 +54,7 @@ export default function SortSelectBox(props) {
           <MenuItem value="none">
             <em>Show All Groupe</em>
           </MenuItem>
-          {groupeListTemp.map((item: string, index) => {
+          {props.groupList.map((item: string, index) => {
             return <MenuItem key={index} value={item}>
                   {item}
             </MenuItem>

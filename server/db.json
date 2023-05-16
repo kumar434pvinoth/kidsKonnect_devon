@@ -78,63 +78,11 @@
   ],
   "sessions": [
     {
-      "id": 102301,
-      "day": "2023-05-31",
-      "start_time": "08:00",
-      "end_time": "12:30",
-      "product_name": "Morning only",
-      "child_id": 15,
-      "group": {
-        "id": 1,
-        "name": "Group 1"
-      },
-      "presence": "unknown"
-    },
-    {
-      "id": 102302,
+      "id": 102501,
       "day": "2023-05-31",
       "start_time": "08:00",
       "end_time": "18:30",
-      "product_name": "Whole day",
-      "child_id": 14,
-      "group": {
-        "id": 1,
-        "name": "Group 1"
-      },
-      "presence": "unknown"
-    },
-    {
-      "id": 102405,
-      "day": "2023-06-02",
-      "start_time": "08:00",
-      "end_time": "12:30",
-      "product_name": "Morning only",
-      "child_id": 15,
-      "group": {
-        "id": 1,
-        "name": "Group 1"
-      },
-      "presence": "unknown"
-    },
-    {
-      "id": 102406,
-      "day": "2023-06-02",
-      "start_time": "08:00",
-      "end_time": "18:30",
-      "product_name": "Whole day",
-      "child_id": 14,
-      "group": {
-        "id": 1,
-        "name": "Group 1"
-      },
-      "presence": "unknown"
-    },
-    {
-      "id": 102407,
-      "day": "2023-06-02",
-      "start_time": "08:00",
-      "end_time": "18:30",
-      "product_name": "Whole day",
+      "product_name": "Evening day",
       "child_id": 13,
       "group": {
         "id": 2,
@@ -143,41 +91,66 @@
       "presence": "present"
     },
     {
-      "id": 102408,
-      "day": "2023-06-02",
-      "start_time": "08:00",
-      "end_time": "18:30",
-      "product_name": "Whole day",
-      "child_id": 12,
-      "group": {
-        "id": 3,
-        "name": "Group 4"
-      },
-      "presence": "unknown"
-    },
-    {
-      "id": 102409,
-      "day": "2023-06-02",
-      "start_time": "14:15",
-      "end_time": "18:30",
-      "product_name": "Afternoon",
-      "child_id": 5029,
-      "group": {
-        "id": 2,
-        "name": "Group 2"
-      },
-      "presence": "unknown"
-    },
-    {
-      "id": 102505,
-      "day": "2023-06-03",
-      "start_time": "08:00",
+      "id": 102502,
+      "day": "2023-05-31",
       "end_time": "12:30",
       "product_name": "Morning only",
       "child_id": 15,
       "group": {
         "id": 1,
         "name": "Group 1"
+      },
+      "presence": "picked up"
+    },
+    {
+      "id": 1025033,
+      "day": "2023-06-02",
+      "start_time": "08:00",
+      "end_time": "18:30",
+      "product_name": "Whole day",
+      "child_id": 16,
+      "group": {
+        "id": 2,
+        "name": "Group 2"
+      },
+      "presence": "picked up"
+    },
+    {
+      "id": 102504,
+      "day": "2023-06-02",
+      "start_time": "08:00",
+      "end_time": "18:30",
+      "product_name": "Whole day",
+      "child_id": 17,
+      "group": {
+        "id": 3,
+        "name": "Group 1"
+      },
+      "presence": "unknown"
+    },
+    {
+      "id": 102505,
+      "day": "2023-06-02",
+      "start_time": "08:00",
+      "end_time": "18:30",
+      "product_name": "Whole day",
+      "child_id": 18,
+      "group": {
+        "id": 3,
+        "name": "Group 4"
+      },
+      "presence": "present"
+    },
+    {
+      "id": 102506,
+      "day": "2023-06-02",
+      "start_time": "08:00",
+      "end_time": "18:30",
+      "product_name": "Whole day",
+      "child_id": 19,
+      "group": {
+        "id": 3,
+        "name": "Group 5"
       },
       "presence": "unknown"
     },
@@ -187,10 +160,10 @@
       "start_time": "08:00",
       "end_time": "18:30",
       "product_name": "Whole day",
-      "child_id": 13,
+      "child_id": 12,
       "group": {
-        "id": 2,
-        "name": "Group 2"
+        "id": 3,
+        "name": "Group 4"
       },
       "presence": "present"
     },
@@ -200,12 +173,12 @@
       "start_time": "08:00",
       "end_time": "18:30",
       "product_name": "Whole day",
-      "child_id": 12,
+      "child_id": 20,
       "group": {
         "id": 3,
-        "name": "Group 4"
+        "name": "Group 5"
       },
-      "presence": "unknown"
+      "presence": "picked up"
     }
   ]
 }

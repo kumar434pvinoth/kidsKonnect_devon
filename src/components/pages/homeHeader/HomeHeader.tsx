@@ -17,9 +17,7 @@ export default function HomeHeader() {
                       </nav>
                        </div>
                 </div>
-                
             </div>
-           
         </>
     )
 }

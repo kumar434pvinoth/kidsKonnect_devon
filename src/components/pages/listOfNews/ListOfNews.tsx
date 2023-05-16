@@ -147,7 +147,7 @@ export default function ListOfNews() {
                   }) : <>
                   <div className='dataNotExist'>
                            <img src={EmptyList} />
-                           <h2> There is no List of Data!</h2>
+                           <h2> Data Not Found!</h2>
                   </div>
                   </>}
                 </div>
