@@ -100,7 +100,7 @@
         "id": 1,
         "name": "Group 1"
       },
-      "presence": "picked up"
+      "presence": "unknown"
     },
     {
       "id": 1025033,
@@ -111,9 +111,9 @@
       "child_id": 16,
       "group": {
         "id": 2,
-        "name": "Group 1"
+        "name": "Group 2"
       },
-      "presence": "picked up"
+      "presence": "unknown"
     },
     {
       "id": 102504,
@@ -139,7 +139,7 @@
         "id": 3,
         "name": "Group 4"
       },
-      "presence": "picked up"
+      "presence": "unknown"
     },
     {
       "id": 102506,
@@ -152,7 +152,7 @@
         "id": 3,
         "name": "Group 5"
       },
-      "presence": "present"
+      "presence": "unknown"
     },
     {
       "id": 102507,
@@ -165,7 +165,7 @@
         "id": 3,
         "name": "Group 4"
       },
-      "presence": "present"
+      "presence": "unknown"
     },
     {
       "id": 102508,

@@ -13,8 +13,8 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 export default function ListOfSessions() {
 
   const [kidsKonnectData, setKidsKonnectData] = useState([]);
-  const [kidsKonnectSessionsDate, setKidsKonnectSessionsDate] = useState(['2023-05-31','2023-06-02','2023-06-03']);
-  const [kidsKonnectDataGroup, setKidsKonnectDataGroup] = useState(['Group 1','Group 2','Group 3','Group 4','Group 5','Group 6', 'Group 7' ]);
+  const [kidsKonnectSessionsDate] = useState(['2023-05-31','2023-06-02','2023-06-03']);
+  const [kidsKonnectDataGroup] = useState(['Group 1','Group 2','Group 3','Group 4','Group 5','Group 6', 'Group 7' ]);
   const [kidsKonnectGroupeFilter, setKidsKonnectGroupeFilter] = useState([]);
   const [kidsKonnectGroupeTwo, setKidsKonnectGroupeTwo] = useState(false);
   const [progressBar, setProgressBar] = useState(false);
@@ -88,15 +88,18 @@ export default function ListOfSessions() {
                 setProgressBar(false)
               }, 500)
             }
-        }).catch((err) => console.log(err));    
+        }).catch((err) => {
+          setProgressBar(false);
+          console.log(err);
+        });  
     }
 
   // Action for presence status  // 
   const handlePresenceStatus = (item) => {
-    // eslint-disable-next-line no-mixed-operators
+    setProgressBar(true);
     let presenseStatus = item.presence === 'unknown' &&  'present' || item.presence === 'present' && 'picked up' ||  item.presence === 'picked up' && 'unknown';
     setProgressBar(true);
-    let header = {
+    let payLoad = {
         id: item.id,
         day: item.day,
         start_time: item.start_time,
@@ -106,29 +109,28 @@ export default function ListOfSessions() {
         group: item.group,
         presence: presenseStatus
     };
-    Axios.put(`${getSessionsUrl}${item.id}`, header).then((res) => {
-      setKidsKonnectData(res.data);
-    }).catch((err) => console.log(err));    
+    Axios.put(`${getSessionsUrl}${item.id}`, payLoad).then((res) => {
+      setKidsKonnectGroupeFilter(res.data);
+      setProgressBar(false);
+    }).catch((err) => {
+      setProgressBar(false);
+      console.log(err);
+    });    
   }
   useEffect(() => {
     Axios.get(getSessionListOnlyJune).then((res) => {
-      // console.log('111111111111111 response 11111111111' + res.data);
       setKidsKonnectData(res.data);
 
      let kidsSessionGrpList: string[] = [];
      res.data.filter((item, index) => {
         return kidsSessionGrpList.push(item.group.name);
-      });
-      let removeDuplicagteGrop = new Set(kidsSessionGrpList);
-           console.log('111111111111111 response 11111111111' + kidsSessionGrpList);
+      });  
 
-      // setKidsKonnectSessionsDate(kidsSessionsDateList);
-      // setKidsKonnectDataGroup();
-      // console.log('date list -------------' + [...kidsSessionDateList]);
-      // setKidsKonnectGroupeFilter(kidsGroupList);
-
-    }).catch((err) => console.log(err));    
-  }, []);
+      setProgressBar(false);
+    }).catch((err) => {
+      console.log(err);
+    });      
+  }, [kidsKonnectData]);
     return  (
         <>
             {progressBar && <ProgressBar message={'Loading Groups....'} /> }
@@ -143,7 +145,6 @@ export default function ListOfSessions() {
                             setProgressBar={setProgressBar} 
                             handleChangeGroupeCallBack={handleChangeGroupeCallBack} 
                             groupList={kidsKonnectDataGroup}
-                            kidsKonnectSessionsDate={kidsKonnectSessionsDate}
                             />
                         </div>
                 </div>
@@ -158,7 +159,7 @@ export default function ListOfSessions() {
                         <div className='listofsession-card-prdname'>
                           <div><b>Product Name:</b> {item.product_name}</div>
                           <div className='presence-status'>
-                          <b>Status</b>  <Button id={item.presence} onClick={() => handlePresenceStatus(item)}> {item.presence}</Button>
+                          <b>Status</b>  <Button onClick={() => handlePresenceStatus(item)}> {item.presence}</Button>
                           </div>
                         </div>
                         <div className='listofsession-card-date'>
@@ -180,7 +181,7 @@ export default function ListOfSessions() {
                       <div className='listofsession-card-prdname'>
                          <div><b>Product Name:</b> {item.product_name}</div>
                          <div className='presence-status'>
-                         <b>Status</b>  <Button id={item.presence}  onClick={() => handlePresenceStatus(item.presence)}> presence</Button>
+                         <b>Status</b>  <Button  onClick={() => handlePresenceStatus(item)}> {item.presence}</Button>
                          </div>
                       </div>
                       <div className='listofsession-card-date'>
