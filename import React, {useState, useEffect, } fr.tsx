@@ -180,7 +180,7 @@ export default function ListOfSessions() {
                       <div className='listofsession-card-prdname'>
                          <div><b>Product Name:</b> {item.product_name}</div>
                          <div className='presence-status'>
-                         <b>Status</b>  <Button id={item.presence}  onClick={() => handlePresenceStatus(item.presence)}> presence</Button>
+                         <b>Status</b>  <Button id={item.presence}  onClick={() => handlePresenceStatus(item.id, item.presence)}> presence</Button>
                          </div>
                       </div>
                       <div className='listofsession-card-date'>

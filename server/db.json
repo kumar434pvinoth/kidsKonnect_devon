@@ -100,7 +100,7 @@
         "id": 1,
         "name": "Group 1"
       },
-      "presence": "picked up"
+      "presence": "unknown"
     },
     {
       "id": 1025033,
@@ -113,7 +113,7 @@
         "id": 2,
         "name": "Group 2"
       },
-      "presence": "picked up"
+      "presence": "present"
     },
     {
       "id": 102504,
@@ -139,7 +139,7 @@
         "id": 3,
         "name": "Group 4"
       },
-      "presence": "present"
+      "presence": "unknown"
     },
     {
       "id": 102506,
@@ -165,7 +165,7 @@
         "id": 3,
         "name": "Group 4"
       },
-      "presence": "present"
+      "presence": "unknown"
     },
     {
       "id": 102508,
@@ -178,7 +178,7 @@
         "id": 3,
         "name": "Group 5"
       },
-      "presence": "picked up"
+      "presence": "unknown"
     }
   ]
 }
