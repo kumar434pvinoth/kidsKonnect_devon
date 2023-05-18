@@ -9,7 +9,6 @@ import AlertStatus from '../../ui/AlertStatus';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import SortSelectBox from '../../ui/SortSelectBox';
 
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
@@ -18,7 +17,7 @@ import DialogContent from '@mui/material/DialogContent';
 import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import { IKidsKonnectNews, IKidsKonnectNewsPost, } from '../../../globals/types';
+import { IKidsKonnectNews, } from '../../../globals/types';
 
 
 
@@ -64,7 +63,7 @@ export default function ListOfNews() {
   const [alertMessage, setAlertMessage] = useState('');
 
 
-  let newsUrl = 'http://localhost:3001/news/';
+  let NEWS_API_URL = 'http://localhost:3001/news/';
 
   const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmitNewsData = (data) => {
@@ -72,7 +71,7 @@ export default function ListOfNews() {
       setNewsAddedAlert(true);
       console.log(data);
       const article = data;
-      Axios.post(newsUrl, article)
+      Axios.post(NEWS_API_URL, article)
           .then(response => {
             handleClose();
             setAlertMessage('Item Added Successfully!');
@@ -85,7 +84,7 @@ export default function ListOfNews() {
     const deleteNewsPost = (id: number) => {
       setProgressBar(true);
       setNewsAddedAlert(true);
-      Axios.delete(`http://localhost:3001/news/${id}`)
+      Axios.delete(`${NEWS_API_URL}${id}`)
           .then(response => {
             handleClose();
             setAlertMessage('Item Deleted Successfully!');
@@ -103,7 +102,7 @@ export default function ListOfNews() {
     };
  
   useEffect(() => {
-    Axios.get(newsUrl).then((res) => {
+    Axios.get(NEWS_API_URL).then((res) => {
       setkidsKonnectNews(res.data);
     }).catch((err) => console.log(err));    
   }, [kidsKonnectNews]);
@@ -119,7 +118,7 @@ export default function ListOfNews() {
                        <div className='newsPostbtn'>
                        <Tooltip title="Post A News">
                             <Button variant="outlined" onClick={handleClickOpen}   startIcon={<AddOutlinedIcon />}>
-                              Add News
+                               Create new Post
                             </Button>
                         </Tooltip>
                         </div>

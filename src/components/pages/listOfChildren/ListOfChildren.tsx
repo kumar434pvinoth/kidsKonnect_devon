@@ -7,14 +7,13 @@ import { IKidsKonnectChildren, } from '../../../globals/types';
 export default function ListOfChildren() {
   
   const [kidsKonnectChildren, setKidsKonnectChildren] = useState([]);
-  const [progressBar, setProgressBar] = useState(false);
+  const [progressBar] = useState(false);
 
-  const getChildrenUrl = 'http://localhost:3001/children/';
+  const CHILDREN_API_URL = 'http://localhost:3001/children/';
 
   useEffect(() => {
-    Axios.get(getChildrenUrl).then((res) => {
+    Axios.get(CHILDREN_API_URL).then((res) => {
       setKidsKonnectChildren(res.data);
-
     }).catch((err) => console.log(err));    
   }, []);
 

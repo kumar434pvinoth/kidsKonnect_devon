@@ -47,6 +47,18 @@
       "author": "dfgfgdfg",
       "content": "fgdfgdfgdfgdfg",
       "id": 9
+    },
+    {
+      "title": "recently with desktop publishing software",
+      "author": "aBC",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n",
+      "id": 10
+    },
+    {
+      "title": "asda",
+      "author": "dsadadasdasd asd sadac ",
+      "content": "asdasdsa",
+      "id": 11
     }
   ],
   "children": [
@@ -103,14 +115,14 @@
       "presence": "picked up"
     },
     {
-      "id": 1025033,
+      "id": 1025012,
       "day": "2023-06-02",
       "start_time": "08:00",
       "end_time": "18:30",
       "product_name": "Whole day",
-      "child_id": 16,
+      "child_id": 17,
       "group": {
-        "id": 2,
+        "id": 3,
         "name": "Group 1"
       },
       "presence": "picked up"
@@ -126,7 +138,7 @@
         "id": 3,
         "name": "Group 1"
       },
-      "presence": "unknown"
+      "presence": "present"
     },
     {
       "id": 102505,
@@ -152,7 +164,7 @@
         "id": 3,
         "name": "Group 5"
       },
-      "presence": "present"
+      "presence": "unknown"
     },
     {
       "id": 102507,
@@ -165,7 +177,7 @@
         "id": 3,
         "name": "Group 4"
       },
-      "presence": "present"
+      "presence": "picked up"
     },
     {
       "id": 102508,
@@ -173,6 +185,19 @@
       "start_time": "08:00",
       "end_time": "18:30",
       "product_name": "Whole day",
+      "child_id": 20,
+      "group": {
+        "id": 3,
+        "name": "Group 5"
+      },
+      "presence": "unknown"
+    },
+    {
+      "id": 1025010,
+      "day": "2023-06-03",
+      "start_time": "08:00",
+      "end_time": "18:30",
+      "product_name": "Morning day",
       "child_id": 20,
       "group": {
         "id": 3,

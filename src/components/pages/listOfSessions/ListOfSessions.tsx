@@ -1,5 +1,5 @@
-import React, {useState, useEffect, }  from 'react';
-import './ListOfSessions.css';
+import React, {useState, useEffect, }  from 'react';        
+import './ListOfSessions.css';        
 import Axios from 'axios';
 import ProgressBar from '../../ui/ProgressBar';
 import SortSelectBox from '../../ui/SortSelectBox';      
@@ -7,22 +7,23 @@ import Button from '@mui/material/Button';
 import EmptyList from '../../../assets/images/empty-list.jpeg';
 import BabyPic from '../../../assets/images/babypic.jpeg';
 import { IKidsKonnectData, } from '../../../globals/types';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';             
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function ListOfSessions() {
 
   const [kidsKonnectData, setKidsKonnectData] = useState([]);
-  const [kidsKonnectSessionsDate] = useState(['2023-05-31','2023-06-02','2023-06-03']);
-  const [kidsKonnectDataGroup] = useState(['Group 1','Group 2','Group 3','Group 4','Group 5','Group 6', 'Group 7' ]);
+
+  const [kidsKonnectSessionsDate, setKidsKonnectSessionsDate] = useState<string[]>([]);
+  const [kidsKonnectDataGroup, setKidsKonnectDataGroup] = useState<string[]>([]);
   const [kidsKonnectGroupeFilter, setKidsKonnectGroupeFilter] = useState([]);
   const [kidsKonnectGroupeTwo, setKidsKonnectGroupeTwo] = useState(false);
   const [progressBar, setProgressBar] = useState(false);
   const [defaultSessionDate, setDefaultSessionDate] = useState('2023-06-02');
   const [currentSessionDate, setCurrentSessionDate] = useState(defaultSessionDate);
-
-  const getSessionsUrl = 'http://localhost:3001/sessions/';        
-  const getSessionListOnlyJune = 'http://localhost:3001/sessions?day=2023-06-02';        
+             
+  const SESSIONS_API_URL = 'http://localhost:3001/sessions/';        
+  const SESSIONS_JUNEONLY_API_URL = 'http://localhost:3001/sessions?day=2023-06-02';        
 
 
       // filtering sessions under Date  // 
@@ -37,7 +38,7 @@ export default function ListOfSessions() {
       let filteredSessionsDate = kidsKonnectSessionsDate[currentDateIndexValue-1];
       // alert(filteredSessionsDate);
       setCurrentSessionDate(filteredSessionsDate);
-      Axios.get(getSessionsUrl).then((res) => {
+      Axios.get(SESSIONS_API_URL).then((res) => {
           let filteredDateList = res.data.filter((item: any , index) => {
             return item.day === filteredSessionsDate;
           });
@@ -53,7 +54,7 @@ export default function ListOfSessions() {
           let filteredSessionsDate = kidsKonnectSessionsDate[currentDateIndexValue+1];
           setCurrentSessionDate(filteredSessionsDate);
           setDefaultSessionDate(filteredSessionsDate)
-          Axios.get(getSessionsUrl).then((res) => {
+          Axios.get(SESSIONS_API_URL).then((res) => {
               let filteredDateList = res.data.filter((item: any , index) => {
                 return item.day === filteredSessionsDate;
               });
@@ -70,7 +71,7 @@ export default function ListOfSessions() {
   // filtering sessions under goups // 
   const handleChangeGroupeCallBack = (getGroupeName) => {
         setProgressBar(true);
-        Axios.get(getSessionsUrl).then((res) => {
+        Axios.get(SESSIONS_API_URL).then((res) => {
           setKidsKonnectData(res.data);
           if(getGroupeName !== 'none') {
             setKidsKonnectGroupeTwo(true);
@@ -109,7 +110,7 @@ export default function ListOfSessions() {
         group: item.group,
         presence: presenseStatus
     };
-    Axios.put(`${getSessionsUrl}${item.id}`, payLoad).then((res) => {
+    Axios.put(`${SESSIONS_API_URL}${item.id}`, payLoad).then((res) => {
       setKidsKonnectGroupeFilter(res.data);
       setProgressBar(false);
     }).catch((err) => {
@@ -118,19 +119,34 @@ export default function ListOfSessions() {
     });    
   }
   useEffect(() => {
-    Axios.get(getSessionListOnlyJune).then((res) => {
+    Axios.get(SESSIONS_JUNEONLY_API_URL).then((res) => {
       setKidsKonnectData(res.data);
 
      let kidsSessionGrpList: string[] = [];
      res.data.filter((item, index) => {
         return kidsSessionGrpList.push(item.group.name);
       });  
-
-      setProgressBar(false);
+    
+    setKidsKonnectDataGroup(kidsSessionGrpList);
+    setProgressBar(false);
+    
     }).catch((err) => {
       console.log(err);
-    });      
-  }, [kidsKonnectData]);
+    });     
+    
+    Axios.get(SESSIONS_API_URL).then((res) => {
+      let kidsSessionDay: string[] = [];
+      res.data.filter((item, index) => {
+        return kidsSessionDay.push(item.day);
+      });  
+      let kidsSessionDayUniqEle = Array.from(new Set(kidsSessionDay));
+      setKidsKonnectSessionsDate(kidsSessionDayUniqEle);
+      setProgressBar(false);
+
+    }).catch((err) => {
+      console.log(err);
+    });     
+  }, []);
     return  (
         <>
             {progressBar && <ProgressBar message={'Loading Groups....'} /> }
